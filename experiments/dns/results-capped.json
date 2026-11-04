@@ -1,0 +1,472 @@
+{
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.11",
+  "logical_cpus": 12,
+  "psutil": "7.2.2",
+  "binaries_sha256": {
+    "master_client": "b008c843b9b0840c8c891e5f9c0500201f30036da8a13b8ffa74fcc52fb5667d",
+    "master_server": "86c438c1667b1aab452ed38ba346d95a9df0b0eba626fd1338a9e45a03db7cb3",
+    "slip_client": "206b43eacdae8c035176e458005117b7874d22ad82d896f01524f247bae6f43c",
+    "slip_server": "d3548091a2e935768beb770542c26524ce6b173b91d9122eabefd028ad8eac83"
+  },
+  "domain": "lab.example.test",
+  "payload_bytes_per_direction": 65536,
+  "profiles": {
+    "clean": {
+      "delay": 0,
+      "drop_every": 0,
+      "hold_every": 0,
+      "hold": 0,
+      "qps": 1500
+    },
+    "delay": {
+      "delay": 0.025,
+      "drop_every": 0,
+      "hold_every": 0,
+      "hold": 0,
+      "qps": 1500
+    },
+    "capped": {
+      "delay": 0.025,
+      "drop_every": 0,
+      "hold_every": 0,
+      "hold": 0,
+      "qps": 300
+    },
+    "impaired": {
+      "delay": 0.025,
+      "drop_every": 23,
+      "hold_every": 11,
+      "hold": 0.075,
+      "qps": 1500
+    }
+  },
+  "trials": [
+    {
+      "profile": "capped",
+      "trial": 1,
+      "transport": "master",
+      "order": [
+        "upload",
+        "download"
+      ],
+      "app_rtt_p95_ms": 342.8189999999631,
+      "master_negotiated": {
+        "dnsDownloadMTU": 500,
+        "dnsDuplication": 2,
+        "dnsUploadMTU": 109,
+        "dnsWindow": 600
+      },
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.918441299999813,
+        "goodput_mbps": 0.17964658052229235,
+        "dns_queries_per_mb": 15136.71875,
+        "dns": {
+          "queries": 992,
+          "upstream_replies": 630,
+          "replies_delivered": 630,
+          "rate_drop": 333,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 338,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 71.94040000013047,
+        "master_client_resend_frames": 117,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.03125,
+            "sampled_peak_rss_mib": 16.70703125
+          },
+          "server": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 34.10546875
+          }
+        }
+      },
+      "download": {
+        "bytes": 65536,
+        "seconds": 2.017845899999884,
+        "goodput_mbps": 0.25982558925834237,
+        "dns_queries_per_mb": 2151.4892578125,
+        "dns": {
+          "queries": 141,
+          "upstream_replies": 139,
+          "replies_delivered": 136,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 23,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 69.22889999987092,
+        "master_client_resend_frames": 0,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0625,
+            "sampled_peak_rss_mib": 17.2265625
+          },
+          "server": {
+            "cpu_seconds": 0.0625,
+            "sampled_peak_rss_mib": 34.6875
+          }
+        }
+      }
+    },
+    {
+      "profile": "capped",
+      "trial": 1,
+      "transport": "slip",
+      "order": [
+        "upload",
+        "download"
+      ],
+      "app_rtt_p95_ms": 125.50430000010238,
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.262511699999777,
+        "goodput_mbps": 0.23172830443265846,
+        "dns_queries_per_mb": 25909.423828125,
+        "dns": {
+          "queries": 1698,
+          "upstream_replies": 678,
+          "replies_delivered": 672,
+          "rate_drop": 1017,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 62.98229999993055,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0625,
+            "sampled_peak_rss_mib": 12.3125
+          },
+          "server": {
+            "cpu_seconds": 0.078125,
+            "sampled_peak_rss_mib": 12.4609375
+          }
+        }
+      },
+      "download": {
+        "bytes": 65536,
+        "seconds": 0.49053179999964414,
+        "goodput_mbps": 1.0688155181792094,
+        "dns_queries_per_mb": 1571.6552734375,
+        "dns": {
+          "queries": 103,
+          "upstream_replies": 97,
+          "replies_delivered": 95,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 62.50499999987369,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 12.34375
+          },
+          "server": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 12.47265625
+          }
+        }
+      }
+    },
+    {
+      "profile": "capped",
+      "trial": 2,
+      "transport": "slip",
+      "order": [
+        "download",
+        "upload"
+      ],
+      "app_rtt_p95_ms": 125.881500000105,
+      "download": {
+        "bytes": 65536,
+        "seconds": 0.7420592000003126,
+        "goodput_mbps": 0.7065312309311429,
+        "dns_queries_per_mb": 1480.1025390625,
+        "dns": {
+          "queries": 97,
+          "upstream_replies": 90,
+          "replies_delivered": 88,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 62.728100000185805,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 10.890625
+          },
+          "server": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 11.00390625
+          }
+        }
+      },
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.304492400000072,
+        "goodput_mbps": 0.22750693384798476,
+        "dns_queries_per_mb": 29083.251953125,
+        "dns": {
+          "queries": 1906,
+          "upstream_replies": 706,
+          "replies_delivered": 708,
+          "rate_drop": 1209,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 62.56119999989096,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.03125,
+            "sampled_peak_rss_mib": 12.56640625
+          },
+          "server": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 12.78515625
+          }
+        }
+      }
+    },
+    {
+      "profile": "capped",
+      "trial": 2,
+      "transport": "master",
+      "order": [
+        "download",
+        "upload"
+      ],
+      "app_rtt_p95_ms": 342.5000999995973,
+      "master_negotiated": {
+        "dnsDownloadMTU": 500,
+        "dnsDuplication": 2,
+        "dnsUploadMTU": 109,
+        "dnsWindow": 600
+      },
+      "download": {
+        "bytes": 65536,
+        "seconds": 2.1114253000000645,
+        "goodput_mbps": 0.2483099923070847,
+        "dns_queries_per_mb": 2120.9716796875,
+        "dns": {
+          "queries": 139,
+          "upstream_replies": 137,
+          "replies_delivered": 134,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 14,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 69.44860000021436,
+        "master_client_resend_frames": 0,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.109375,
+            "sampled_peak_rss_mib": 12.69921875
+          },
+          "server": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 23.77734375
+          }
+        }
+      },
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.802246700000069,
+        "goodput_mbps": 0.18709559012059399,
+        "dns_queries_per_mb": 17425.537109375,
+        "dns": {
+          "queries": 1142,
+          "upstream_replies": 631,
+          "replies_delivered": 633,
+          "rate_drop": 494,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 337,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 77.86089999990509,
+        "master_client_resend_frames": 125,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.046875,
+            "sampled_peak_rss_mib": 18.30859375
+          },
+          "server": {
+            "cpu_seconds": 0.09375,
+            "sampled_peak_rss_mib": 33.359375
+          }
+        }
+      }
+    },
+    {
+      "profile": "capped",
+      "trial": 3,
+      "transport": "master",
+      "order": [
+        "upload",
+        "download"
+      ],
+      "app_rtt_p95_ms": 344.1587000002073,
+      "master_negotiated": {
+        "dnsDownloadMTU": 500,
+        "dnsDuplication": 2,
+        "dnsUploadMTU": 109,
+        "dnsWindow": 600
+      },
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.8812081000000944,
+        "goodput_mbps": 0.1819681126122,
+        "dns_queries_per_mb": 14785.7666015625,
+        "dns": {
+          "queries": 969,
+          "upstream_replies": 628,
+          "replies_delivered": 627,
+          "rate_drop": 336,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 312,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 67.88470000037705,
+        "master_client_resend_frames": 147,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.078125,
+            "sampled_peak_rss_mib": 18.4140625
+          },
+          "server": {
+            "cpu_seconds": 0.03125,
+            "sampled_peak_rss_mib": 31.96484375
+          }
+        }
+      },
+      "download": {
+        "bytes": 65536,
+        "seconds": 2.2134376999997585,
+        "goodput_mbps": 0.23686593934857855,
+        "dns_queries_per_mb": 2105.712890625,
+        "dns": {
+          "queries": 138,
+          "upstream_replies": 138,
+          "replies_delivered": 136,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 19,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 69.96209999988423,
+        "master_client_resend_frames": 0,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 18.42578125
+          },
+          "server": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 32.79296875
+          }
+        }
+      }
+    },
+    {
+      "profile": "capped",
+      "trial": 3,
+      "transport": "slip",
+      "order": [
+        "upload",
+        "download"
+      ],
+      "app_rtt_p95_ms": 126.21870000020863,
+      "upload": {
+        "bytes": 65536,
+        "seconds": 2.3333942000003844,
+        "goodput_mbps": 0.22468899596986813,
+        "dns_queries_per_mb": 25329.58984375,
+        "dns": {
+          "queries": 1660,
+          "upstream_replies": 675,
+          "replies_delivered": 672,
+          "rate_drop": 985,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 62.91770000007091,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 12.31640625
+          },
+          "server": {
+            "cpu_seconds": 0.015625,
+            "sampled_peak_rss_mib": 12.33984375
+          }
+        }
+      },
+      "download": {
+        "bytes": 65536,
+        "seconds": 0.748392099999819,
+        "goodput_mbps": 0.70055255794406,
+        "dns_queries_per_mb": 1449.5849609375,
+        "dns": {
+          "queries": 95,
+          "upstream_replies": 94,
+          "replies_delivered": 96,
+          "rate_drop": 0,
+          "query_drop": 0,
+          "reply_drop": 0,
+          "question_repeat": 0,
+          "reordered_replies": 0,
+          "unmatched_reply": 0
+        },
+        "dns_rtt_p95_ms": 63.6211999999432,
+        "master_client_resend_frames": null,
+        "process": {
+          "client": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 12.359375
+          },
+          "server": {
+            "cpu_seconds": 0.0,
+            "sampled_peak_rss_mib": 12.37890625
+          }
+        }
+      }
+    }
+  ]
+}
