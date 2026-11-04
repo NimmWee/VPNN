@@ -1,0 +1,82 @@
+{
+  "packages": [
+    {
+      "name": "SDK platform-tools",
+      "version": "37.0.1",
+      "package": "platform-tools",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-win.zip",
+      "filename": "platform-tools_r37.0.1-win.zip",
+      "algorithm": "sha1",
+      "checksum": "e03e78b1d80b396f1c3358e31251cb31740e1110",
+      "size": 8044989,
+      "destination": ".toolchains/android-sdk/platform-tools",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/platform-tools.xml"
+    },
+    {
+      "name": "SDK emulator",
+      "version": "37.2.13",
+      "package": "emulator",
+      "url": "https://dl.google.com/android/repository/emulator-windows_x64-16740729.zip",
+      "filename": "emulator-windows_x64-16740729.zip",
+      "algorithm": "sha1",
+      "checksum": "4d7268aa7787c640ad892844e6c9a5f159e91ad3",
+      "size": 455344678,
+      "destination": ".toolchains/android-sdk/emulator",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/emulator.xml"
+    },
+    {
+      "name": "SDK platforms-android-37.0",
+      "version": "2",
+      "package": "platforms;android-37.0",
+      "url": "https://dl.google.com/android/repository/platform-37.0_r02.zip",
+      "filename": "platform-37.0_r02.zip",
+      "algorithm": "sha1",
+      "checksum": "ed8ebf7f8822a4de5686d427f237d2fa30ff7410",
+      "size": 67281901,
+      "destination": ".toolchains/android-sdk/platforms/android-37.0",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/platforms-android-37.0.xml"
+    },
+    {
+      "name": "SDK build-tools-37.0.0",
+      "version": "37.0.0",
+      "package": "build-tools;37.0.0",
+      "url": "https://dl.google.com/android/repository/build-tools_r37_windows.zip",
+      "filename": "build-tools_r37_windows.zip",
+      "algorithm": "sha1",
+      "checksum": "e9c97e26b5b5678002e9d3fed632c841ae62d99f",
+      "size": 61077164,
+      "destination": ".toolchains/android-sdk/build-tools/37.0.0",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/build-tools-37.0.0.xml"
+    },
+    {
+      "name": "SDK ndk-28.2.13676358",
+      "version": "28.2.13676358",
+      "package": "ndk;28.2.13676358",
+      "url": "https://dl.google.com/android/repository/android-ndk-r28c-windows.zip",
+      "filename": "android-ndk-r28c-windows.zip",
+      "algorithm": "sha1",
+      "checksum": "086bba43ff2f5eb0e387b15c8278bb4e0d89ba1d",
+      "size": 748118221,
+      "destination": ".toolchains/android-sdk/ndk/28.2.13676358",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/ndk-28.2.13676358.xml"
+    },
+    {
+      "name": "SDK system-images-android-35-default-x86_64",
+      "version": "2",
+      "package": "system-images;android-35;default;x86_64",
+      "url": "https://dl.google.com/android/repository/sys-img/android/x86_64-35_r02.zip",
+      "filename": "x86_64-35_r02.zip",
+      "algorithm": "sha1",
+      "checksum": "2d857d170c0d1b827149565da34b3383e5306f7f",
+      "size": 782404023,
+      "destination": ".toolchains/android-sdk/system-images/android-35/default/x86_64",
+      "strip_prefix": "__first__",
+      "metadata_file": "tools/sdk-metadata/system-images-android-35-default-x86_64.xml"
+    }
+  ]
+}

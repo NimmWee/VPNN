@@ -1,0 +1,10 @@
+{
+  "name": "LLVM Windows bindgen",
+  "version": "20.1.8",
+  "url": "https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.8/clang%2Bllvm-20.1.8-x86_64-pc-windows-msvc.tar.xz",
+  "filename": "clang+llvm-20.1.8-x86_64-pc-windows-msvc.tar.xz",
+  "algorithm": "sha256",
+  "checksum": "f229769f11d6a6edc8ada599c0cda964b7dee6ab1a08c6cf9dd7f513e85b107f",
+  "destination": ".toolchains/llvm",
+  "extract": false
+}

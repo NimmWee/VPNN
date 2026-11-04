@@ -1,0 +1,14 @@
+.toolchains/
+.cache/
+.android/
+downloads/
+logs/
+artifacts/
+/app/
+private/
+*.keystore
+*.jks
+__pycache__/
+local.properties
+key.properties
+.env

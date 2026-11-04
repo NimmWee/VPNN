@@ -1,0 +1,10 @@
+{
+  "name": "Android SDK manager 19",
+  "version": "19.0",
+  "url": "https://dl.google.com/android/repository/commandlinetools-win-13114758_latest.zip",
+  "filename": "commandlinetools-win-13114758_latest.zip",
+  "algorithm": "sha1",
+  "checksum": "54a582f3bf73e04253602f2d1c80bd5868aac115",
+  "destination": ".toolchains/android-sdk/cmdline-tools/19.0",
+  "strip_prefix": "cmdline-tools/"
+}

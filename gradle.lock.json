@@ -1,0 +1,10 @@
+{
+  "name": "Gradle",
+  "version": "9.8.0",
+  "url": "https://downloads.gradle.org/distributions/gradle-9.8.0-all.zip",
+  "filename": "gradle-9.8.0-all.zip",
+  "algorithm": "sha256",
+  "checksum": "46ac66d47f30f3dacfdf306e0b714a91a34fb94a22ba0a744b280933f47bc0cf",
+  "destination": ".toolchains/gradle",
+  "extract": false
+}
