@@ -1,0 +1,8 @@
+{
+  "source": "synthetic",
+  "seconds": 8,
+  "payload_bytes": [1000000, 2000000],
+  "cpu_usec_delta": 4000000,
+  "baseline_ram_bytes": 67108864,
+  "load_ram_bytes": 100663296
+}
